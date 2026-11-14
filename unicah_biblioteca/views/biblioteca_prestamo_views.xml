@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- VISTA LISTA -->
+    <record id="view_prestamo_list" model="ir.ui.view">
+        <field name="name">unicah.prestamo.list</field>
+        <field name="model">unicah.prestamo</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="estudiante_id"/>
+                <field name="fecha_prestamo"/>
+                <field name="fecha_devolucion"/>
+                <field name="dias_prestamo"/>
+                <field name="estado"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- VISTA FORMULARIO -->
+    <record id="view_prestamo_form" model="ir.ui.view">
+        <field name="name">unicah.prestamo.form</field>
+        <field name="model">unicah.prestamo</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="estudiante_id"/>
+                        <field name="fecha_prestamo"/>
+                        <field name="fecha_devolucion"/>
+                        <field name="dias_prestamo"/>
+                        <field name="estado"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_prestamo" model="ir.actions.act_window">
+        <field name="name">Préstamos</field>
+        <field name="res_model">unicah.prestamo</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_biblioteca_root" name="Biblioteca UNICAH"/>
+
+    <menuitem id="menu_biblioteca_prestamo" parent="menu_biblioteca_root" name="Préstamos" action="action_prestamo"/>
+
+</odoo>

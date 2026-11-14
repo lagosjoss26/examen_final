@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_tienda" model="ir.ui.view">
+        <field name="name">sale.order.form.tienda</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="tipo_cliente" readonly="1"/>
+                <field name="convenio_id"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']" position="before">
+                <header>
+                    <button name="action_aplicar_convenio" string="Aplicar convenio" type="object" class="oe_highlight"/>
+                </header>
+                <group>
+                    <field name="convenio_aplicado" readonly="1"/>
+                    <field name="monto_ahorro" readonly="1"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

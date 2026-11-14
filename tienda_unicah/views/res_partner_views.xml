@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_res_partner_form_tienda" model="ir.ui.view">
+        <field name="name">res.partner.form.tienda</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='category_id']" position="after">
+                <group string="Datos UNICAH">
+                    <field name="tipo_cliente"/>
+                    <field name="numero_cuenta"/>
+                    <field name="carrera"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

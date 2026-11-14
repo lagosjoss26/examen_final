@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="convenio_estudiante" model="tienda.convenio">
+        <field name="name">Convenio Estudiante</field>
+        <field name="tipo_cliente">estudiante</field>
+        <field name="porcentaje">15</field>
+        <field name="fecha_inicio">2026-01-01</field>
+    </record>
+
+    <record id="convenio_docente" model="tienda.convenio">
+        <field name="name">Convenio Docente</field>
+        <field name="tipo_cliente">docente</field>
+        <field name="porcentaje">20</field>
+        <field name="fecha_inicio">2026-01-01</field>
+    </record>
+
+    <record id="convenio_administrativo" model="tienda.convenio">
+        <field name="name">Convenio Administrativo</field>
+        <field name="tipo_cliente">administrativo</field>
+        <field name="porcentaje">10</field>
+        <field name="fecha_inicio">2026-01-01</field>
+    </record>
+</odoo>
